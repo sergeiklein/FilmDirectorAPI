@@ -7,7 +7,7 @@
 namespace FilmDirectorAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstMIgration : Migration
+    public partial class FirstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -37,6 +37,7 @@ namespace FilmDirectorAPI.Migrations
                     FilmName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     FilmLength = table.Column<int>(type: "int", nullable: false),
                     FilmYear = table.Column<int>(type: "int", nullable: false),
+                    MoneyEarned = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DirectorId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -66,23 +67,23 @@ namespace FilmDirectorAPI.Migrations
 
             migrationBuilder.InsertData(
                 table: "Films",
-                columns: new[] { "Id", "DirectorId", "FilmLength", "FilmName", "FilmYear" },
+                columns: new[] { "Id", "DirectorId", "FilmLength", "FilmName", "FilmYear", "MoneyEarned" },
                 values: new object[,]
                 {
-                    { 1, 1, 130, "Schindler's List", 1975 },
-                    { 2, 1, 127, "Saving Private Ryan", 1993 },
-                    { 3, 2, 196, "Titanic", 1997 },
-                    { 4, 2, 162, "Avatar", 2009 },
-                    { 5, 3, 178, "Fellowship of the Rings", 2001 },
-                    { 6, 3, 201, "King Kong", 2005 },
-                    { 7, 4, 154, "Pulp Fiction", 1994 },
-                    { 8, 4, 159, "Once Upon a Time in Hollywood", 2019 },
-                    { 9, 5, 126, "Iron Man", 2008 },
-                    { 10, 5, 97, "Elf", 2003 },
-                    { 11, 6, 105, "Sleepy Hollow", 1999 },
-                    { 12, 6, 126, "Batman", 1989 },
-                    { 13, 7, 152, "Interstellar", 2014 },
-                    { 14, 7, 148, "Inseption", 2012 }
+                    { 1, 1, 130, "Schindler's List", 1975, "322.2 million USD" },
+                    { 2, 1, 127, "Saving Private Ryan", 1993, "481.8 million USD" },
+                    { 3, 2, 196, "Titanic", 1997, "2.216 billion USD" },
+                    { 4, 2, 162, "Avatar", 2009, "2.923 billion USD" },
+                    { 5, 3, 178, "Fellowship of the Rings", 2001, "898.2 million USD" },
+                    { 6, 3, 201, "King Kong", 2005, "562.1 million USD" },
+                    { 7, 4, 154, "Pulp Fiction", 1994, "213.9 million USD" },
+                    { 8, 4, 159, "Once Upon a Time in Hollywood", 2019, "377.4 million USD" },
+                    { 9, 5, 126, "Iron Man", 2008, "585.8 million USD" },
+                    { 10, 5, 97, "Elf", 2003, "225.11 million USD" },
+                    { 11, 6, 105, "Sleepy Hollow", 1999, "207 million USD" },
+                    { 12, 6, 126, "Batman", 1989, "411.6 million USD" },
+                    { 13, 7, 152, "Interstellar", 2014, "701.7 million USD" },
+                    { 14, 7, 148, "Inseption", 2012, "836.8 million USD" }
                 });
 
             migrationBuilder.CreateIndex(

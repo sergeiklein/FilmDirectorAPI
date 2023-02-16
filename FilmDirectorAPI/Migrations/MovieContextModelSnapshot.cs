@@ -130,6 +130,10 @@ namespace FilmDirectorAPI.Migrations
                     b.Property<int>("FilmYear")
                         .HasColumnType("int");
 
+                    b.Property<string>("MoneyEarned")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("DirectorId");
@@ -143,7 +147,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 1,
                             FilmLength = 130,
                             FilmName = "Schindler's List",
-                            FilmYear = 1975
+                            FilmYear = 1975,
+                            MoneyEarned = "322.2 million USD"
                         },
                         new
                         {
@@ -151,7 +156,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 1,
                             FilmLength = 127,
                             FilmName = "Saving Private Ryan",
-                            FilmYear = 1993
+                            FilmYear = 1993,
+                            MoneyEarned = "481.8 million USD"
                         },
                         new
                         {
@@ -159,7 +165,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 2,
                             FilmLength = 196,
                             FilmName = "Titanic",
-                            FilmYear = 1997
+                            FilmYear = 1997,
+                            MoneyEarned = "2.216 billion USD"
                         },
                         new
                         {
@@ -167,7 +174,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 2,
                             FilmLength = 162,
                             FilmName = "Avatar",
-                            FilmYear = 2009
+                            FilmYear = 2009,
+                            MoneyEarned = "2.923 billion USD"
                         },
                         new
                         {
@@ -175,7 +183,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 3,
                             FilmLength = 178,
                             FilmName = "Fellowship of the Rings",
-                            FilmYear = 2001
+                            FilmYear = 2001,
+                            MoneyEarned = "898.2 million USD"
                         },
                         new
                         {
@@ -183,7 +192,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 3,
                             FilmLength = 201,
                             FilmName = "King Kong",
-                            FilmYear = 2005
+                            FilmYear = 2005,
+                            MoneyEarned = "562.1 million USD"
                         },
                         new
                         {
@@ -191,7 +201,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 4,
                             FilmLength = 154,
                             FilmName = "Pulp Fiction",
-                            FilmYear = 1994
+                            FilmYear = 1994,
+                            MoneyEarned = "213.9 million USD"
                         },
                         new
                         {
@@ -199,7 +210,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 4,
                             FilmLength = 159,
                             FilmName = "Once Upon a Time in Hollywood",
-                            FilmYear = 2019
+                            FilmYear = 2019,
+                            MoneyEarned = "377.4 million USD"
                         },
                         new
                         {
@@ -207,7 +219,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 5,
                             FilmLength = 126,
                             FilmName = "Iron Man",
-                            FilmYear = 2008
+                            FilmYear = 2008,
+                            MoneyEarned = "585.8 million USD"
                         },
                         new
                         {
@@ -215,7 +228,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 5,
                             FilmLength = 97,
                             FilmName = "Elf",
-                            FilmYear = 2003
+                            FilmYear = 2003,
+                            MoneyEarned = "225.11 million USD"
                         },
                         new
                         {
@@ -223,7 +237,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 6,
                             FilmLength = 105,
                             FilmName = "Sleepy Hollow",
-                            FilmYear = 1999
+                            FilmYear = 1999,
+                            MoneyEarned = "207 million USD"
                         },
                         new
                         {
@@ -231,7 +246,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 6,
                             FilmLength = 126,
                             FilmName = "Batman",
-                            FilmYear = 1989
+                            FilmYear = 1989,
+                            MoneyEarned = "411.6 million USD"
                         },
                         new
                         {
@@ -239,7 +255,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 7,
                             FilmLength = 152,
                             FilmName = "Interstellar",
-                            FilmYear = 2014
+                            FilmYear = 2014,
+                            MoneyEarned = "701.7 million USD"
                         },
                         new
                         {
@@ -247,7 +264,8 @@ namespace FilmDirectorAPI.Migrations
                             DirectorId = 7,
                             FilmLength = 148,
                             FilmName = "Inseption",
-                            FilmYear = 2012
+                            FilmYear = 2012,
+                            MoneyEarned = "836.8 million USD"
                         });
                 });
 
